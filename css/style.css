@@ -32,3 +32,28 @@
 
 @keyframes show-text { 0% { color: transparent; }
   100% { color: #fff; } }
+
+/**************
+** contact
+*****/
+.contact .contact-bg { background-color: #1a73e8; }
+
+.contact form input[type="text"], .contact form input[type="email"] { border: 1px solid #ddd; height: 50px; line-height: 50px; width: calc(50% - 3px); padding: 0 15px; }
+
+.contact form input[type="text"]:focus, .contact form input[type="email"]:focus { -webkit-box-shadow: 0px 0px 0px 2px #e1e1e1 inset; box-shadow: 0px 0px 0px 2px #e1e1e1 inset; }
+
+.contact form textarea { margin: 3px 0 0; border: 1px solid #ddd; width: 100%; height: 100px; padding: 15px; resize: none; }
+
+.contact form textarea::-webkit-input-placeholder { color: #bbb; }
+
+.contact form textarea:-ms-input-placeholder { color: #bbb; }
+
+.contact form textarea::-ms-input-placeholder { color: #bbb; }
+
+.contact form textarea::placeholder { color: #bbb; }
+
+.contact form textarea:focus { -webkit-box-shadow: 0px 0px 0px 2px #e1e1e1 inset; box-shadow: 0px 0px 0px 2px #e1e1e1 inset; }
+
+.contact form input[type="submit"] { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; margin: 10px 0 0; text-align: center; background-size: 200% auto; color: white; /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/ -webkit-box-shadow: 0px 16px 47px -15px rgba(85, 85, 85, 0.29); box-shadow: 0px 16px 47px -15px rgba(85, 85, 85, 0.29); border-radius: 30px; border: none; height: 50px; line-height: 50px; width: 200px; background-image: -webkit-gradient(linear, left top, right top, from(#a3c9e2), color-stop(51%, #9618f7), to(#a3c9e2)); background-image: linear-gradient(to right, #a3c9e2 0%, #9618f7 51%, #a3c9e2 100%); -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
+
+.contact form input[type="submit"]:hover { background-position: right center; }

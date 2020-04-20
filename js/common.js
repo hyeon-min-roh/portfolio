@@ -45,10 +45,31 @@ function scrollEventBox(){
     emailjs.init('user_bYmRwIsYr00m4mQRTOPms');
 })();
 window.onload = function() {
+        
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
         // generate the contact number value
         this.contact_number.value = Math.random() * 100000 | 0;
+
+        // check data
+        let mail_name = $("[name='to_name']").val();
+        let mail_addr = $("[name='from_name']").val();
+        let mail_cont = $("[name='message_html']").val();
+        if( mail_name == "" ){
+            alert("발신자를 입력해주세요 :)");
+            $("[name='to_name']").focus();
+            return;
+        }
+        if( mail_addr == "" ){
+            alert("발신메일 주소를 입력해주세요 :)");
+            $("[name='from_name']").focus();
+            return;
+        }
+        if( mail_cont == "" ){
+            alert("보내실 내용을 입력해주세요 :)");
+            $("[name='message_html']").focus();
+            return;
+        }
         emailjs.sendForm('gmail', 'template_D27Dr1Dc', this);
     });
 }
