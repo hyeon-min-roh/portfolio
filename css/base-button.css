@@ -1,0 +1,11 @@
+.btn-box:after { content: ""; display: block; clear: both; }
+
+.btn-box .btn-box__left { float: left; }
+
+.btn-box .btn-box__right { float: right; }
+
+.btn { display: inline-block; border: 0; background-color: #fff; padding: 0; width: 100px; text-align: center; cursor: pointer; height: 35px; line-height: 35px; }
+
+.btn.submit-btn { background-color: #1a73e8; color: #fff; }
+
+.btn.cancel-btn { background-color: #efefef; }

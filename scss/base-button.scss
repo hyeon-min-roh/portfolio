@@ -1,0 +1,33 @@
+@import './variables'; 
+@import './mixin';
+
+.btn-box{
+    @include clear();
+
+    .btn-box__left{
+        float: left;
+    }
+    .btn-box__right{
+        float: right;
+    }
+}
+
+.btn{
+    display:inline-block;
+    border:0;
+    background-color:#fff;
+    padding:0;
+    width:100px;
+    text-align: center;
+    cursor: pointer;
+    @include height(35px);
+}
+
+.btn.submit-btn{
+    background-color: $color;
+    color:#fff;
+}
+
+.btn.cancel-btn{
+    background-color:#efefef;
+}

@@ -1,0 +1,101 @@
+@import './variables'; 
+@import './mixin';
+
+
+/**************
+** main
+*****/
+.main{
+    width: 100%;
+    background-color: $color;
+
+    .txt{
+        span{
+            display:inline-block;
+            font-size:42px;        
+            color:transparent;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            animation-name: show-text;
+            animation-duration: 1s;            
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-play-state: running;
+            animation-fill-mode: both;
+            @include height(52px);        
+
+            &:before{
+                content:"";
+                display:inline-block;
+                position:absolute;
+                top:0;
+                left:0;
+                bottom:0;
+                right:0;
+                height: 100%;
+                transform: translate(-110%, 0);
+                animation-name: block-reveal;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+                animation-direction: normal;
+                animation-play-state: running;
+                animation-fill-mode: both;
+            }
+        }
+
+        &.txt1{
+            span{
+                animation-delay: 1.3s;
+                &:before{
+                    background-color:#fff;                    
+                    animation-delay: 1s;
+                }
+            }
+        }
+        &.txt2{
+            span{
+                animation-delay: 1.4s;
+                &:before{
+                    background-color:#fff;                    
+                    animation-delay: 1.1s;
+                }
+            }
+        }
+        &.txt3{
+            span{
+                animation-delay: 1.5s;
+                &:before{
+                    background-color:#fff;                    
+                    animation-delay: 1.2s;
+                }
+            }
+        }
+    }
+}
+
+
+
+@keyframes block-reveal{
+    0%{
+        transform: translate(-110%, 0);
+    }
+    55%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(110%, 0)
+    }   
+}
+
+
+@keyframes show-text{
+    0%{
+        color: transparent;
+    }       
+    100%{
+        color: #fff;
+    }        
+}
+  

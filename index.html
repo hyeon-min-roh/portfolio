@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <!-- seo -->
+    <meta name="description" content="site's description"/>
+    <meta name="keyword" content="site's keyword"/>
+    <meta name="author" content="site's creators name"/>
+    <meta name="Distribution" content="site's distributor name"/>
+    <meta name="Copyright" cotnent="copyright@web address"/>
+    <meta name="robots" content="index,follow"/>
+
+    <!-- sns -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="url"/>
+    <meta property="og:title" id="ogtitle" content="title"/>
+    <meta property="og:description" id="ogdesc" content="content"/>
+    <meta property="og:image" id="ogimg" content="image src"/>
+
+    <title>SITE TITLE</title>
+
+    <!-- css -->
+    <link href='./css/reset.css' rel='stylesheet' type='text/css'>
+    <link href='./css/common.css' rel='stylesheet' type='text/css'>
+    <link href='./css/layout.css' rel='stylesheet' type='text/css'>    
+    <link href='./css/style.css' rel='stylesheet' type='text/css'>
+    <link href='./css/base-list.css' rel='stylesheet' type='text/css'>
+    <link href='./css/base-button.css' rel='stylesheet' type='text/css'>
+    <link href='./css/slick-theme.css' rel='stylesheet' type='text/css'>
+    <link href='./css/slick.css' rel='stylesheet' type='text/css'>
+
+    <!-- javascript -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript" src="./js/jQuery-3.4.1.js"></script>    
+    <script type="text/javascript" src="./js/vue.js"></script>    
+    <script type="text/javascript" src="./js/slick.js"></script>
+    <script type="text/javascript" src="./js/layout.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>    
+</head>
+<body>
+    <!--  
+        >> summary <<
+        .toggle-box > .toggle-box__top, .toggle-box__cont    
+        table.base_list
+        .btn-box > .btn-box__left, .btn-box__right
+        .btn, .btn.btn-submit, .btn.btn-cancel
+        .scroll-event-box
+    -->
+
+
+    <!-- header -->
+    <header>
+        <div class="sitewidth">
+            <!--div id="menu">
+                <div class="sitemap-circle"></div>
+                <span class="menu-top"></span>
+                <span class="menu-middle"></span>
+                <span class="menu-bottom"></span>
+            </div-->
+            <h1 id="logo"><a href="/">LOGO</a></h1>
+            <!--nav>
+                <ul>
+                    <li>
+                        <a href="#">menu</a>
+                        <ul>
+                            <li><a href="#">sub</a></li>
+                            <li><a href="#">sub</a></li>
+                            <li><a href="#">sub</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                </ul>
+            </nav-->
+        </div>
+    </header>
+
+    <div id="sitemap">
+        <div class="sitemap-background"></div>        
+        <div class="sitemap">
+            <ul>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main id="content">
+        
+        <!-- main >
+        <div class="main">
+            <div class="txt txt1"><span>HI ;)</span></div>
+            <div class="txt txt2"><span>HYEONMIN</span></div>
+            <div class="txt txt3"><span>WEBDEVELOPER</span></div>
+        </div-->
+
+        <!-- contact -->
+        <div class="contact">
+            <div class="sitewidth">
+                <form id="contact-form">
+                    <input type="hidden" name="contact_number">
+                    <label>Name</label>
+                    <input type="text" name="to_name">
+                    <label>Email</label>
+                    <input type="email" name="from_name">
+                    <label>Message</label>
+                    <textarea name="message_html"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+
+                <div class="email">hyeonminroh@gmail.com</div>
+                <div class="email_logo"></div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- footer -->
+    <footer>
+        <div class="sitewidth">
+            <address></address>
+        </div>
+    </footer>
+
+    <div class="btn-move__top"><button type="button" class="btn"><img src="./img/ico_arrow_up.svg" alt="위로"/></button></div>
+</body>
+</html>

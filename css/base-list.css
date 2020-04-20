@@ -1,0 +1,3 @@
+table.base_list { width: 100%; border-top: 1px solid #888; }
+
+table.base_list th, table.base_list td { height: 60px; line-height: 60px; border-bottom: 1px solid #e5e5e5; padding: 0 20px; }

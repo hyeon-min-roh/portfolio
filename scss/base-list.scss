@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@import './variables'; 
+@import './mixin';
+
+table.base_list{
+    width:100%;
+    border-top:1px solid #888;
+    th, td{
+        @include height(60px);
+        border-bottom: 1px solid #e5e5e5;
+        padding:0 20px;
+    }
+}

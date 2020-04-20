@@ -1,0 +1,34 @@
+/**************
+** main
+*****/
+.main { width: 100%; background-color: #1a73e8; }
+
+.main .txt span { display: inline-block; font-size: 42px; color: transparent; font-weight: bold; white-space: nowrap; overflow: hidden; position: relative; -webkit-animation-name: show-text; animation-name: show-text; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-direction: normal; animation-direction: normal; -webkit-animation-play-state: running; animation-play-state: running; -webkit-animation-fill-mode: both; animation-fill-mode: both; height: 52px; line-height: 52px; }
+
+.main .txt span:before { content: ""; display: inline-block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; height: 100%; -webkit-transform: translate(-110%, 0); transform: translate(-110%, 0); -webkit-animation-name: block-reveal; animation-name: block-reveal; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-direction: normal; animation-direction: normal; -webkit-animation-play-state: running; animation-play-state: running; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+
+.main .txt.txt1 span { -webkit-animation-delay: 1.3s; animation-delay: 1.3s; }
+
+.main .txt.txt1 span:before { background-color: #fff; -webkit-animation-delay: 1s; animation-delay: 1s; }
+
+.main .txt.txt2 span { -webkit-animation-delay: 1.4s; animation-delay: 1.4s; }
+
+.main .txt.txt2 span:before { background-color: #fff; -webkit-animation-delay: 1.1s; animation-delay: 1.1s; }
+
+.main .txt.txt3 span { -webkit-animation-delay: 1.5s; animation-delay: 1.5s; }
+
+.main .txt.txt3 span:before { background-color: #fff; -webkit-animation-delay: 1.2s; animation-delay: 1.2s; }
+
+@-webkit-keyframes block-reveal { 0% { -webkit-transform: translate(-110%, 0); transform: translate(-110%, 0); }
+  55% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  100% { -webkit-transform: translate(110%, 0); transform: translate(110%, 0); } }
+
+@keyframes block-reveal { 0% { -webkit-transform: translate(-110%, 0); transform: translate(-110%, 0); }
+  55% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  100% { -webkit-transform: translate(110%, 0); transform: translate(110%, 0); } }
+
+@-webkit-keyframes show-text { 0% { color: transparent; }
+  100% { color: #fff; } }
+
+@keyframes show-text { 0% { color: transparent; }
+  100% { color: #fff; } }
