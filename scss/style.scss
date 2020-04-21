@@ -98,61 +98,450 @@
     }        
 }
   
+/**************
+** work
+*****/
+.work{
+    padding: 80px 20px;
+    ul{
+        @include clear();
+        li{
+            float: left;
+            width: 50%;
+            overflow: hidden;            
+            position: relative;
+            img{
+                width: 100%;
+                transition: all 0.2s ease;
+                transform: scale(1);
+            }
+
+            .txt{
+                position: absolute;
+                color: #fff;
+                opacity: 0;
+                z-index: 2;
+                transition: all 0.2s ease;                
+                &.tit{
+                    top: 20px;
+                    left: 20px;
+                    font-size: 40px;
+                    font-weight: bold;
+                }
+                &.desc{
+                    bottom: 50px;
+                    right: 20px;
+                    font-size: 16px;
+                    text-align: right;
+                    line-height: 20px;
+                }
+                &.date{
+                    bottom: 20px;
+                    right: 20px;
+                    font-size: 24px;
+                    font-weight: 100;
+                }  
+                &.arrow{
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 0px;
+                    overflow: hidden;
+                    transition: all 0.6s ease;
+                    img{
+                        width: 40px;
+                    }                    
+                }                
+            }
+            
+            &:before{
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color, 0.8);
+                z-index: 1;
+                transition: all 0.2s ease;
+                opacity: 0;
+            }
+            &:hover{                
+                img{
+                    transform: scale(1.2);
+                }               
+                .txt{
+                    opacity: 1;
+
+                    &.arrow{
+                        width: 80px;         
+                    }        
+                }
+                &:before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .work_history{
+        padding: 80px 20px;        
+        
+        dl{        
+            color: #333;
+            position: relative;            
+            @include clear();
+            dt{
+                font-size: 60px;            
+                font-weight: 100;            
+                float: left;
+                line-height:80px;                
+                .ball{
+                    position: absolute;
+                    display: inline-block;
+                    border-radius: 50%;
+                    background-color: #f3f3f3;
+                    width: 60px;
+                    height: 60px;
+                    top: -5px;
+                    left: -15px;
+                }
+                .txt{
+                    position: relative;
+                }
+            }
+            dd{            
+                font-size: 40px;
+                font-weight: bold;
+                float: left;
+                line-height:80px;
+                margin: 0 0 0 50px;
+            }
+
+            &:nth-child(n+2){
+                margin: 20px 0 0;
+            }
+            &:hover{
+                transform: all 0.2s ease;
+                transform: scale(1.2);
+                margin-left:100px;
+            }
+        }
+    }
+}
+
+
+
+
+/**************
+** sns
+*****/
+.sns{
+    background-color: $color;
+    padding: 50px 0;
+    text-align: center;;
+    @include clear(); 
+
+    strong{
+        display:block;
+        color:#fff;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+    ul{
+        display: inline-block;
+        margin: 30px 0 0;
+        li{
+            float: left;
+            background-color: rgba(#fff, 0.3);
+            border-radius: 10px;                      
+            transition: all 0.2s ease;
+
+
+            &:nth-child(n+2){
+                margin-left:20px;
+            }
+            &:hover{
+                background-color: rgba(#fff, 0.5);
+            }
+
+            a{
+                display:block;
+                position: relative;
+                padding:10px;
+                &:hover{
+                    span{
+                        visibility: visible;
+                        opacity: 1;
+                        transform: translate(-50%, 30px);
+                    }                    
+                }
+
+                img{
+                    vertical-align: middle;
+                    width: 25px;
+                }
+                span{
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    display: inline-block;
+                    background-color:#fff;
+                    padding: 5px 12px;
+                    border-radius: 2px;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all 0.2s ease;
+                    font-size: 12px;
+                    color: #555;
+
+                    &:before{
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-bottom: 5px solid #fff;
+                        position: absolute;
+                        top: -5px;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                    }
+                }
+            }            
+        }
+    }
+}
+
 
 
 /**************
 ** contact
 *****/
-.contact{
+.contact_btn{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;    
 
-    .contact-bg{
+    button{
         background-color: $color;
-    }
+        border-radius: 50%;
+        border: 2px solid #fff;
+        width: 80px;
+        height: 80px;
+        line-height:80px;
+        text-align: center;
+        /*background-image: url("../img/ico_mail.svg");*/
+        background-position: center;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        img{
+            width:40px;
+            animation-name: anim-mail;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+        }  
 
-    form{
-        input[type="text"],
-        input[type="email"]{
-            border: 1px solid #ddd;
-            height: 50px;
-            line-height: 50px;
-            width:calc(50% - 3px);
-            padding: 0 15px;
-            &:focus{
-                box-shadow: 0px 0px 0px 2px #e1e1e1 inset;
+        &:hover{
+            background-color: $color-hover;
+        }
+    }
+}
+.contact{
+    position: fixed;
+    top: 50%;
+    left: 50%;    
+    border: 1px solid #ddd;
+    display:none;
+    opacity: 0;
+    transition: all 0.2s ease;
+    transform: translate(-50%, 100%);
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    z-index: 10;
+    &.active{
+        display: block;
+        opacity: 1;
+        animation-name: anim-popup;   
+        
+        & + .contact_dimmed{
+            display:block;
+            animation-name: anim-dimmed;
+            animation-delay: 0.5s;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: both;
+        }
+    }
+    &.nonactive{
+        animation-name: anim-popclose;   
+        
+        & + .contact_dimmed{
+            animation-name: anim-dimmedclose;               
+        }        
+    }
+    .contact-top{
+        height: 60px;
+        line-height: 60px;
+        background-color: #f3f3f3;
+        text-align: center;
+        color: $color;
+        font-size: 20px;
+        font-weight: 600;
+        position: relative;
+
+        button{
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translate(0, -50%);
+            border:none;
+            background-color: transparent;
+            padding: 10px;
+
+            img{
+                width: 12px;
             }
         }
+    }
+    form{        
+        width: 600px;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 3px;
+        @include clear();
+        input[type="text"],
+        input[type="email"]{
+            margin: 0 0 10px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            padding: 0 15px;
+            color:#333;
+        }
         textarea{
-            margin: 3px 0 0;
+            margin: 5px 0 0;
             border: 1px solid #ddd;
             width: 100%;
-            height: 100px;
+            height: 150px;
             padding: 15px;
             resize: none;
+            color:#333;
             &::placeholder{
                 color: #bbb;
             }
-            &:focus{
-                box-shadow: 0px 0px 0px 2px #e1e1e1 inset;
-            }
         }
         input[type="submit"]{
-            flex: 1 1 auto;
             margin: 10px 0 0;
-            text-align: center;            
-            background-size: 200% auto;
+            text-align: center;
             color: white;
             /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
             box-shadow: 0px 16px 47px -15px rgba(85,85,85,.29);
-            border-radius: 30px;
+            border-radius: 3px;
             border: none;
-            height: 50px;
-            line-height: 50px;
-            width: 200px;        
-            background-image: linear-gradient(to right, #a3c9e2 0%, #9618f7 51%, #a3c9e2 100%);
-            transition: all 0.2s ease;
-            &:hover{                
-                background-position: right center;
+            height: 45px;
+            line-height: 45px;
+            width: 160px;        
+            background-color: $color;
+            float: right;
+            position: relative;
+            background-image: url("../img/ico_send.svg");
+            background-repeat: no-repeat;
+            background-size: 24px;
+            background-position: 50% 48px;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: both;
+            transition: all 0.2s ease;            
+            &:hover{
+                animation-name: anim-send;   
+                background-color: $color-hover;           
             }
         }
+    }    
+}
+.contact_dimmed{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 100%;
+    left: 0;
+    background-color: rgba(#000000, 0.6);
+    opacity: 0;
+    z-index: 5;
+}
+
+@keyframes anim-popup{
+    0%{
+        transform: translate(-50%, 120%);
+    }      
+    100%{
+        transform: translate(-50%, -50%);
+    }           
+}
+
+@keyframes anim-popclose{
+    0%{
+        transform: translate(-50%, -50%);        
+    }      
+    100%{
+        transform: translate(-50%, 120%);
+    }           
+}
+
+@keyframes anim-mail{
+    0%{
+        transform: translateY(0);
+    }      
+    50%{
+        transform: translateY(5px);
+    }    
+    100%{
+        transform: translateY(0);
+    }        
+}
+
+@keyframes anim-send{
+    0%{
+        background-position: 50% 48px;
+    }      
+    50%{
+        background-position: 90% center;
     }
+    100%{
+        background-position: 150% -48px;
+    }           
+}
+
+@keyframes anim-dimmed{
+    0%{
+        opacity: 0;
+        bottom: 0;        
+    }      
+    100%{
+        opacity: 1;
+        bottom: 0;     
+    }           
+}
+
+@keyframes anim-dimmedclose{
+    0%{
+        opacity: 1;
+        bottom: 0;
+    }
+    90%{
+        opacity: 0;
+        bottom: 0;
+    }     
+    100%{        
+        bottom: 100%;
+    }           
 }

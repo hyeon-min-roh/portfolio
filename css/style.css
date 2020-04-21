@@ -34,15 +34,117 @@
   100% { color: #fff; } }
 
 /**************
+** work
+*****/
+.work { padding: 80px 20px; }
+
+.work ul:after { content: ""; display: block; clear: both; }
+
+.work ul li { float: left; width: 50%; overflow: hidden; position: relative; }
+
+.work ul li img { width: 100%; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; -webkit-transform: scale(1); transform: scale(1); }
+
+.work ul li .txt { position: absolute; color: #fff; opacity: 0; z-index: 2; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
+
+.work ul li .txt.tit { top: 20px; left: 20px; font-size: 40px; font-weight: bold; }
+
+.work ul li .txt.desc { bottom: 50px; right: 20px; font-size: 16px; text-align: right; line-height: 20px; }
+
+.work ul li .txt.date { bottom: 20px; right: 20px; font-size: 24px; font-weight: 100; }
+
+.work ul li .txt.arrow { top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 0px; overflow: hidden; -webkit-transition: all 0.6s ease; transition: all 0.6s ease; }
+
+.work ul li .txt.arrow img { width: 40px; }
+
+.work ul li:before { content: ""; display: block; position: absolute; width: 100%; height: 100%; background-color: rgba(26, 115, 232, 0.8); z-index: 1; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; opacity: 0; }
+
+.work ul li:hover img { -webkit-transform: scale(1.2); transform: scale(1.2); }
+
+.work ul li:hover .txt { opacity: 1; }
+
+.work ul li:hover .txt.arrow { width: 80px; }
+
+.work ul li:hover:before { opacity: 1; }
+
+.work .work_history { padding: 80px 20px; }
+
+.work .work_history dl { color: #333; position: relative; }
+
+.work .work_history dl:after { content: ""; display: block; clear: both; }
+
+.work .work_history dl dt { font-size: 60px; font-weight: 100; float: left; line-height: 80px; }
+
+.work .work_history dl dt .ball { position: absolute; display: inline-block; border-radius: 50%; background-color: #f3f3f3; width: 60px; height: 60px; top: -5px; left: -15px; }
+
+.work .work_history dl dt .txt { position: relative; }
+
+.work .work_history dl dd { font-size: 40px; font-weight: bold; float: left; line-height: 80px; margin: 0 0 0 50px; }
+
+.work .work_history dl:nth-child(n+2) { margin: 20px 0 0; }
+
+.work .work_history dl:hover { -webkit-transform: all 0.2s ease; transform: all 0.2s ease; -webkit-transform: scale(1.2); transform: scale(1.2); margin-left: 100px; }
+
+/**************
+** sns
+*****/
+.sns { background-color: #1a73e8; padding: 50px 0; text-align: center; }
+
+.sns:after { content: ""; display: block; clear: both; }
+
+.sns strong { display: block; color: #fff; font-size: 22px; letter-spacing: 1px; }
+
+.sns ul { display: inline-block; margin: 30px 0 0; }
+
+.sns ul li { float: left; background-color: rgba(255, 255, 255, 0.3); border-radius: 10px; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
+
+.sns ul li:nth-child(n+2) { margin-left: 20px; }
+
+.sns ul li:hover { background-color: rgba(255, 255, 255, 0.5); }
+
+.sns ul li a { display: block; position: relative; padding: 10px; }
+
+.sns ul li a:hover span { visibility: visible; opacity: 1; -webkit-transform: translate(-50%, 30px); transform: translate(-50%, 30px); }
+
+.sns ul li a img { vertical-align: middle; width: 25px; }
+
+.sns ul li a span { position: absolute; bottom: 0; left: 50%; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); display: inline-block; background-color: #fff; padding: 5px 12px; border-radius: 2px; visibility: hidden; opacity: 0; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; font-size: 12px; color: #555; }
+
+.sns ul li a span:before { content: ''; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 5px solid #fff; position: absolute; top: -5px; left: 50%; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); }
+
+/**************
 ** contact
 *****/
-.contact .contact-bg { background-color: #1a73e8; }
+.contact_btn { position: fixed; bottom: 50px; right: 50px; }
 
-.contact form input[type="text"], .contact form input[type="email"] { border: 1px solid #ddd; height: 50px; line-height: 50px; width: calc(50% - 3px); padding: 0 15px; }
+.contact_btn button { background-color: #1a73e8; border-radius: 50%; border: 2px solid #fff; width: 80px; height: 80px; line-height: 80px; text-align: center; /*background-image: url("../img/ico_mail.svg");*/ background-position: center; background-size: 40px; background-repeat: no-repeat; }
 
-.contact form input[type="text"]:focus, .contact form input[type="email"]:focus { -webkit-box-shadow: 0px 0px 0px 2px #e1e1e1 inset; box-shadow: 0px 0px 0px 2px #e1e1e1 inset; }
+.contact_btn button img { width: 40px; -webkit-animation-name: anim-mail; animation-name: anim-mail; -webkit-animation-duration: 1.5s; animation-duration: 1.5s; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-direction: normal; animation-direction: normal; -webkit-animation-play-state: running; animation-play-state: running; }
 
-.contact form textarea { margin: 3px 0 0; border: 1px solid #ddd; width: 100%; height: 100px; padding: 15px; resize: none; }
+.contact_btn button:hover { background-color: #165dba; }
+
+.contact { position: fixed; top: 50%; left: 50%; border: 1px solid #ddd; display: none; opacity: 0; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; -webkit-transform: translate(-50%, 100%); transform: translate(-50%, 100%); -webkit-animation-duration: 0.5s; animation-duration: 0.5s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-direction: normal; animation-direction: normal; -webkit-animation-fill-mode: both; animation-fill-mode: both; z-index: 10; }
+
+.contact.active { display: block; opacity: 1; -webkit-animation-name: anim-popup; animation-name: anim-popup; }
+
+.contact.active + .contact_dimmed { display: block; -webkit-animation-name: anim-dimmed; animation-name: anim-dimmed; -webkit-animation-delay: 0.5s; animation-delay: 0.5s; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-direction: normal; animation-direction: normal; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+
+.contact.nonactive { -webkit-animation-name: anim-popclose; animation-name: anim-popclose; }
+
+.contact.nonactive + .contact_dimmed { -webkit-animation-name: anim-dimmedclose; animation-name: anim-dimmedclose; }
+
+.contact .contact-top { height: 60px; line-height: 60px; background-color: #f3f3f3; text-align: center; color: #1a73e8; font-size: 20px; font-weight: 600; position: relative; }
+
+.contact .contact-top button { position: absolute; top: 50%; right: 10px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); border: none; background-color: transparent; padding: 10px; }
+
+.contact .contact-top button img { width: 12px; }
+
+.contact form { width: 600px; padding: 30px; background-color: #fff; border-radius: 3px; }
+
+.contact form:after { content: ""; display: block; clear: both; }
+
+.contact form input[type="text"], .contact form input[type="email"] { margin: 0 0 10px; border: none; border-bottom: 1px solid #ddd; height: 40px; line-height: 40px; width: 100%; padding: 0 15px; color: #333; }
+
+.contact form textarea { margin: 5px 0 0; border: 1px solid #ddd; width: 100%; height: 150px; padding: 15px; resize: none; color: #333; }
 
 .contact form textarea::-webkit-input-placeholder { color: #bbb; }
 
@@ -52,8 +154,58 @@
 
 .contact form textarea::placeholder { color: #bbb; }
 
-.contact form textarea:focus { -webkit-box-shadow: 0px 0px 0px 2px #e1e1e1 inset; box-shadow: 0px 0px 0px 2px #e1e1e1 inset; }
+.contact form input[type="submit"] { margin: 10px 0 0; text-align: center; color: white; /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/ -webkit-box-shadow: 0px 16px 47px -15px rgba(85, 85, 85, 0.29); box-shadow: 0px 16px 47px -15px rgba(85, 85, 85, 0.29); border-radius: 3px; border: none; height: 45px; line-height: 45px; width: 160px; background-color: #1a73e8; float: right; position: relative; background-image: url("../img/ico_send.svg"); background-repeat: no-repeat; background-size: 24px; background-position: 50% 48px; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-direction: normal; animation-direction: normal; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
 
-.contact form input[type="submit"] { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; margin: 10px 0 0; text-align: center; background-size: 200% auto; color: white; /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/ -webkit-box-shadow: 0px 16px 47px -15px rgba(85, 85, 85, 0.29); box-shadow: 0px 16px 47px -15px rgba(85, 85, 85, 0.29); border-radius: 30px; border: none; height: 50px; line-height: 50px; width: 200px; background-image: -webkit-gradient(linear, left top, right top, from(#a3c9e2), color-stop(51%, #9618f7), to(#a3c9e2)); background-image: linear-gradient(to right, #a3c9e2 0%, #9618f7 51%, #a3c9e2 100%); -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
+.contact form input[type="submit"]:hover { -webkit-animation-name: anim-send; animation-name: anim-send; background-color: #165dba; }
 
-.contact form input[type="submit"]:hover { background-position: right center; }
+.contact_dimmed { position: fixed; width: 100%; height: 100%; bottom: 100%; left: 0; background-color: rgba(0, 0, 0, 0.6); opacity: 0; z-index: 5; }
+
+@-webkit-keyframes anim-popup { 0% { -webkit-transform: translate(-50%, 120%); transform: translate(-50%, 120%); }
+  100% { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); } }
+
+@keyframes anim-popup { 0% { -webkit-transform: translate(-50%, 120%); transform: translate(-50%, 120%); }
+  100% { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); } }
+
+@-webkit-keyframes anim-popclose { 0% { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  100% { -webkit-transform: translate(-50%, 120%); transform: translate(-50%, 120%); } }
+
+@keyframes anim-popclose { 0% { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+  100% { -webkit-transform: translate(-50%, 120%); transform: translate(-50%, 120%); } }
+
+@-webkit-keyframes anim-mail { 0% { -webkit-transform: translateY(0); transform: translateY(0); }
+  50% { -webkit-transform: translateY(5px); transform: translateY(5px); }
+  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+
+@keyframes anim-mail { 0% { -webkit-transform: translateY(0); transform: translateY(0); }
+  50% { -webkit-transform: translateY(5px); transform: translateY(5px); }
+  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+
+@-webkit-keyframes anim-send { 0% { background-position: 50% 48px; }
+  50% { background-position: 90% center; }
+  100% { background-position: 150% -48px; } }
+
+@keyframes anim-send { 0% { background-position: 50% 48px; }
+  50% { background-position: 90% center; }
+  100% { background-position: 150% -48px; } }
+
+@-webkit-keyframes anim-dimmed { 0% { opacity: 0;
+    bottom: 0; }
+  100% { opacity: 1;
+    bottom: 0; } }
+
+@keyframes anim-dimmed { 0% { opacity: 0;
+    bottom: 0; }
+  100% { opacity: 1;
+    bottom: 0; } }
+
+@-webkit-keyframes anim-dimmedclose { 0% { opacity: 1;
+    bottom: 0; }
+  90% { opacity: 0;
+    bottom: 0; }
+  100% { bottom: 100%; } }
+
+@keyframes anim-dimmedclose { 0% { opacity: 1;
+    bottom: 0; }
+  90% { opacity: 0;
+    bottom: 0; }
+  100% { bottom: 100%; } }

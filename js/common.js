@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    // AOS
+    AOS.init();
 
     // toggle box
     $(".toggle-box .toggle-box__top").on("click", function(){       
@@ -36,13 +38,27 @@ function scrollEventBox(){
         if(window_scroll_top<=box_top&&window_scroll_top+window_height>=box_top){$(this).addClass("active");}
         else $(this).removeClass("active"); // if u want to have event just once. change to comments.
     });
+
+    /*******************
+     * Email modal
+     ****/
+    $(".contact_btn").on("click", function(){        
+        $(".contact").removeClass("nonactive");
+        $(".contact").addClass("active");
+    });
+
+    $(".contact .contact-top button").on("click", function(){
+
+        $(".contact").addClass("nonactive");
+        
+    });
 }
 
 /*******************
  * EmailJS
  ****/
 (function(){
-    emailjs.init('user_bYmRwIsYr00m4mQRTOPms');
+    emailjs.init('user_bYmRwIsYr00m4mQRTOPms');    
 })();
 window.onload = function() {
         
@@ -71,5 +87,6 @@ window.onload = function() {
             return;
         }
         emailjs.sendForm('gmail', 'template_D27Dr1Dc', this);
+        alert("메일이 전송되었습니다 XD");
     });
 }

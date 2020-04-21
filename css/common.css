@@ -1,4 +1,4 @@
-@import url(c:\Users\user\Documents\default\css\fonts.css);
+/*@import '../css/fonts.css';*/
 * { font-family: "Noto Sans KR", sans-serif; }
 
 body { min-width: 1200px; }
