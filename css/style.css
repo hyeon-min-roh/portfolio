@@ -72,17 +72,19 @@
 
 .work .work_history dl:after { content: ""; display: block; clear: both; }
 
-.work .work_history dl dt { font-size: 60px; font-weight: 100; float: left; line-height: 80px; }
+.work .work_history dl dt { -webkit-transition: all 0.2s ease; transition: all 0.2s ease; font-size: 60px; font-weight: 100; float: left; line-height: 80px; }
 
 .work .work_history dl dt .ball { position: absolute; display: inline-block; border-radius: 50%; background-color: #f3f3f3; width: 60px; height: 60px; top: -5px; left: -15px; }
 
 .work .work_history dl dt .txt { position: relative; }
 
-.work .work_history dl dd { font-size: 40px; font-weight: bold; float: left; line-height: 80px; margin: 0 0 0 50px; }
+.work .work_history dl dd { -webkit-transition: all 0.2s ease; transition: all 0.2s ease; font-size: 40px; font-weight: bold; float: left; line-height: 80px; margin: 0 0 0 50px; }
 
 .work .work_history dl:nth-child(n+2) { margin: 20px 0 0; }
 
-.work .work_history dl:hover { -webkit-transform: all 0.2s ease; transform: all 0.2s ease; -webkit-transform: scale(1.2); transform: scale(1.2); margin-left: 100px; }
+.work .work_history dl:hover dt { font-size: 70px; }
+
+.work .work_history dl:hover dd { font-size: 50px; }
 
 /**************
 ** sns
@@ -209,3 +211,24 @@
   90% { opacity: 0;
     bottom: 0; }
   100% { bottom: 100%; } }
+
+/**************
+** skill
+*****/
+.skill { padding: 100px 20px; }
+
+.skill:after { content: ""; display: block; clear: both; }
+
+.skill .skills { float: left; width: 50%; }
+
+.skill .skills ul:after { content: ""; display: block; clear: both; }
+
+.skill .skills ul li { float: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: calc(25% - 3.75px); height: 140px; text-align: center; cursor: pointer; border: 1px solid #ddd; }
+
+.skill .skills ul li:nth-child(n+2) { margin-left: 5px; }
+
+.skill .skills ul li:nth-child(4n+1) { margin-left: 0px; }
+
+.skill .skills ul li:nth-child(n+5) { margin-top: 5px; }
+
+.skill .desc { float: left; width: 50%; }

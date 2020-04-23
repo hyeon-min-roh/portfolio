@@ -191,6 +191,7 @@
             position: relative;            
             @include clear();
             dt{
+                transition: all 0.2s ease;
                 font-size: 60px;            
                 font-weight: 100;            
                 float: left;
@@ -210,6 +211,7 @@
                 }
             }
             dd{            
+                transition: all 0.2s ease;
                 font-size: 40px;
                 font-weight: bold;
                 float: left;
@@ -220,16 +222,17 @@
             &:nth-child(n+2){
                 margin: 20px 0 0;
             }
-            &:hover{
-                transform: all 0.2s ease;
-                transform: scale(1.2);
-                margin-left:100px;
+            &:hover{                
+                dt{                
+                    font-size: 70px;
+                }
+                dd{
+                    font-size: 50px;
+                }
             }
         }
     }
 }
-
-
 
 
 /**************
@@ -544,4 +547,46 @@
     100%{        
         bottom: 100%;
     }           
+}
+
+
+/**************
+** skill
+*****/
+.skill{
+    padding: 100px 20px;
+    @include clear();
+    .skills{
+        float: left;
+        width: 50%;
+        ul{
+            @include clear();
+            li{
+                float:left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: calc(25% - 3.75px);
+                height: 140px;
+                text-align: center;
+                cursor: pointer;
+                border:1px solid #ddd;
+
+                &:nth-child(n+2){
+                    margin-left:5px;
+                }
+                &:nth-child(4n+1){
+                    margin-left:0px;
+                }
+                &:nth-child(n+5){
+                    margin-top:5px;
+                }
+            }
+        }
+    }
+
+    .desc{
+        float: left;
+        width: 50%;
+    }
 }
