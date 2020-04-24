@@ -43,13 +43,13 @@ function scrollEventBox(){
      * Email modal
      ****/
     $(".contact_btn").on("click", function(){        
-        $(".contact").removeClass("nonactive");
-        $(".contact").addClass("active");
+        $(".pf_contact").removeClass("nonactive");
+        $(".pf_contact").addClass("active");
     });
 
-    $(".contact .contact-top button").on("click", function(){
+    $(".pf_contact .contact-top button").on("click", function(){
 
-        $(".contact").addClass("nonactive");
+        $(".pf_contact").addClass("nonactive");
         
     });
 }
