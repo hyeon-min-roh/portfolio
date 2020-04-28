@@ -1,7 +1,9 @@
 /**************
 ** main
 *****/
-.main { width: 100%; background-color: #1a73e8; }
+.main { width: 100%; background-color: #1a73e8; position: relative; }
+
+.main .txtWrapper { position: absolute; bottom: 10%; left: 100px; }
 
 .main .txt span { display: inline-block; font-size: 42px; color: transparent; font-weight: bold; white-space: nowrap; overflow: hidden; position: relative; -webkit-animation-name: show-text; animation-name: show-text; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-direction: normal; animation-direction: normal; -webkit-animation-play-state: running; animation-play-state: running; -webkit-animation-fill-mode: both; animation-fill-mode: both; height: 52px; line-height: 52px; }
 
@@ -221,54 +223,82 @@
 
 .pf_skill .sitewidth:after { content: ""; display: block; clear: both; }
 
-.pf_skill .skills ul { width: 800px; margin: 0 auto; }
+.pf_skill .skills > ul { width: 800px; margin: 0 auto; cursor: url("../img/cursor.cur"), auto; }
 
-.pf_skill .skills ul:after { content: ""; display: block; clear: both; }
+.pf_skill .skills > ul:after { content: ""; display: block; clear: both; }
 
-.pf_skill .skills ul li { float: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: calc(25% - 3.75px); height: 140px; text-align: center; }
+.pf_skill .skills > ul > li { position: relative; float: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: calc(25% - 3.75px); height: 140px; text-align: center; }
 
-.pf_skill .skills ul li:nth-child(n+2) { margin-left: 5px; }
+.pf_skill .skills > ul > li:nth-child(n+2) { margin-left: 5px; }
 
-.pf_skill .skills ul li:nth-child(4n+1) { margin-left: 0px; }
+.pf_skill .skills > ul > li:nth-child(4n+1) { margin-left: 0px; }
 
-.pf_skill .skills ul li:nth-child(n+5) { margin-top: 5px; }
+.pf_skill .skills > ul > li:nth-child(n+5) { margin-top: 5px; }
 
-.pf_skill .skills ul li .folder { position: relative; display: inline-block; width: 100px; height: calc(100px / 100 * 75); -webkit-perspective: 400px; perspective: 400px; cursor: url("../img/cursor.cur"), auto; }
+.pf_skill .skills > ul > li .folder { position: relative; display: inline-block; width: 100px; height: calc(100px / 100 * 75); -webkit-perspective: 400px; perspective: 400px; cursor: url("../img/cursor.cur"), auto; }
 
-.pf_skill .skills ul li .folder:before { content: ""; display: inline-block; background-color: #cca352; width: 100%; height: 88%; position: absolute; bottom: 0; left: 0; border-radius: 4px; }
+.pf_skill .skills > ul > li .folder:before { content: ""; display: inline-block; background-color: #cca352; width: 100%; height: 88%; position: absolute; bottom: 0; left: 0; border-radius: 4px; }
 
-.pf_skill .skills ul li .folder:after { content: ""; display: inline-block; background-color: #cca352; width: 50%; height: 100%; position: absolute; top: 0; left: 0; border-radius: 3px; }
+.pf_skill .skills > ul > li .folder:after { content: ""; display: inline-block; background-color: #cca352; width: 50%; height: 100%; position: absolute; top: 0; left: 0; border-radius: 3px; }
 
-.pf_skill .skills ul li .folder span:before { z-index: 1; content: ""; display: inline-block; background-color: #fff; width: calc(100% - 16px); height: calc(88% - 16px); position: absolute; bottom: 8px; left: 50%; border: 1px solid #ddd; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); border-radius: 5px; -webkit-transition: -webkit-transform 500ms ease 0ms; transition: -webkit-transform 500ms ease 0ms; transition: transform 500ms ease 0ms; transition: transform 500ms ease 0ms, -webkit-transform 500ms ease 0ms; }
+.pf_skill .skills > ul > li .folder span:before { z-index: 1; content: ""; display: inline-block; background-color: #fff; width: calc(100% - 16px); height: calc(88% - 16px); position: absolute; bottom: 8px; left: 50%; border: 1px solid #ddd; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); border-radius: 5px; -webkit-transition: -webkit-transform 500ms ease 0ms; transition: -webkit-transform 500ms ease 0ms; transition: transform 500ms ease 0ms; transition: transform 500ms ease 0ms, -webkit-transform 500ms ease 0ms; }
 
-.pf_skill .skills ul li .folder span:after { z-index: 2; content: ""; display: inline-block; background-color: #ffcc66; width: 100%; height: 87%; position: absolute; bottom: 0px; left: 0; border-radius: 4px; -webkit-transition: -webkit-transform 250ms ease 0ms; transition: -webkit-transform 250ms ease 0ms; transition: transform 250ms ease 0ms; transition: transform 250ms ease 0ms, -webkit-transform 250ms ease 0ms; -webkit-transform-origin: 0 100% 0; transform-origin: 0 100% 0; outline: 1px solid transparent; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; display: -webkit-box; display: -ms-flexbox; display: flex; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; color: #755c2b; font-weight: bold; font-size: 14px; }
+.pf_skill .skills > ul > li .folder span:after { z-index: 2; content: ""; display: inline-block; background-color: #ffcc66; width: 100%; height: 87%; position: absolute; bottom: 0px; left: 0; border-radius: 4px; -webkit-transition: -webkit-transform 250ms ease 0ms; transition: -webkit-transform 250ms ease 0ms; transition: transform 250ms ease 0ms; transition: transform 250ms ease 0ms, -webkit-transform 250ms ease 0ms; -webkit-transform-origin: 0 100% 0; transform-origin: 0 100% 0; outline: 1px solid transparent; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; display: -webkit-box; display: -ms-flexbox; display: flex; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; color: #755c2b; font-weight: bold; font-size: 14px; }
 
-.pf_skill .skills ul li .folder input:hover + span:before { -webkit-transform: translate(-50%, -15px); transform: translate(-50%, -15px); }
+.pf_skill .skills > ul > li .folder input:hover + span:before { -webkit-transform: translate(-50%, -15px); transform: translate(-50%, -15px); }
 
-.pf_skill .skills ul li .folder input:hover + span:after { -webkit-transform: rotateX(-30deg); transform: rotateX(-30deg); }
+.pf_skill .skills > ul > li .folder input:hover + span:after { -webkit-transform: rotateX(-30deg); transform: rotateX(-30deg); }
 
-.pf_skill .skills ul li:nth-child(1) span:after { content: "Html"; }
+.pf_skill .skills > ul > li:nth-child(1) span:after { content: "Html"; }
 
-.pf_skill .skills ul li:nth-child(2) span:after { content: "Css"; }
+.pf_skill .skills > ul > li:nth-child(2) span:after { content: "Css"; }
 
-.pf_skill .skills ul li:nth-child(3) span:after { content: "Sass"; }
+.pf_skill .skills > ul > li:nth-child(3) span:after { content: "Sass"; }
 
-.pf_skill .skills ul li:nth-child(4) span:after { content: "Js"; }
+.pf_skill .skills > ul > li:nth-child(4) span:after { content: "Js"; }
 
-.pf_skill .skills ul li:nth-child(5) span:after { content: "jQuery"; }
+.pf_skill .skills > ul > li:nth-child(5) span:after { content: "jQuery"; }
 
-.pf_skill .skills ul li:nth-child(6) span:after { content: "Vue"; }
+.pf_skill .skills > ul > li:nth-child(6) span:after { content: "Vue"; }
 
-.pf_skill .skills ul li:nth-child(7) span:after { content: "Php"; }
+.pf_skill .skills > ul > li:nth-child(7) span:after { content: "Php"; }
 
-.pf_skill .skills ul li:nth-child(8) span:after { content: "Jsp"; }
+.pf_skill .skills > ul > li:nth-child(8) span:after { content: "Jsp"; }
 
-.pf_skill .skills ul li:nth-child(9) span:after { content: "MySQL"; }
+.pf_skill .skills > ul > li:nth-child(9) span:after { content: "MySQL"; }
 
-.pf_skill .skills ul li:nth-child(10) span:after { content: "Android"; }
+.pf_skill .skills > ul > li:nth-child(10) span:after { content: "Android"; }
 
-.pf_skill .skills ul li:nth-child(11) span:after { content: "Java"; }
+.pf_skill .skills > ul > li:nth-child(11) span:after { content: "Java"; }
 
-.pf_skill .skills ul li:nth-child(12) span:after { content: "C#"; }
+.pf_skill .skills > ul > li:nth-child(12) span:after { content: "C#"; }
 
-.pf_skill .desc { float: left; width: 50%; }
+.pf_skill .skills > ul > li ul { z-index: 5; position: absolute; top: -50%; left: 7px; -webkit-transition: top 300ms ease 500ms; transition: top 300ms ease 500ms; -webkit-transition: width 100ms ease 500ms; transition: width 100ms ease 500ms; opacity: 0; width: 0px; overflow: hidden; }
+
+.pf_skill .skills > ul > li ul li { float: left; background-color: #fff; width: 86px; height: 100px; border: 1px solid #ddd; border-radius: 5px; margin-right: 10px; }
+
+.pf_skill .skills > ul > li:hover ul { top: -120%; opacity: 1; }
+
+@-webkit-keyframes anim-openFoler { 0% { top: -50%;
+    opacity: 1; }
+  30% { top: -120%;
+    opacity: 1; }
+  100% { width: 800px; } }
+
+@keyframes anim-openFoler { 0% { top: -50%;
+    opacity: 1; }
+  30% { top: -120%;
+    opacity: 1; }
+  100% { width: 800px; } }
+
+.pf_skill .files { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); display: none; }
+
+.pf_skill .files > ul { width: 800px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.pf_skill .files > ul > li { float: left; background-color: #fff; width: calc(33.33% - 13.33px); height: 260px; }
+
+.pf_skill .files > ul > li:nth-child(n+2) { margin-left: 20px; }
+
+.pf_skill .files > ul > li:nth-child(3n+1) { margin-left: 0px; }
+
+.pf_skill .files > ul > li:nth-child(n+4) { margin-top: 20px; }
